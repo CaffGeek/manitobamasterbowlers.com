@@ -1,0 +1,154 @@
+﻿body
+{
+	background-image: url(../images/background.jpg);
+	background-repeat: repeat-x;
+	background-color: #666666;
+	background-position: top;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+#main
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 822px;
+	background-color: #FFFFFF;
+}
+#left_main
+{
+	background-color: #FFFFFF;
+	background-image: url(../images/left_main.gif);
+	background-repeat: repeat-y;
+	background-position: top;
+}
+#nav img, #nav a
+{
+	border:0;
+	margin:0;
+	padding:0;
+	float: left;
+}
+a
+{
+	color: #000066;
+}
+a:hover
+{
+	color: #0000CC;
+}
+
+#content
+{
+	background-attachment: fixed;
+	background-color: #FFFFFF;
+	background-image: url(../images/content.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+#content p
+{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#content h3
+{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#content_area
+{
+	width: 822px;
+	background-color: #FFFFFF;
+	background-image: url(../images/side_repeat.gif);
+	background-repeat: repeat-y;
+	background-position: right;
+}
+
+#content_area table
+{
+	width: 822px;
+	vertical-align: top;
+}
+
+#content_area table td
+{
+	vertical-align: top;
+}
+
+#sidebar
+{
+	background-image: url(../images/side_bottom.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+#content table
+{
+	width: 520px;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 20px;
+}
+
+table #ctl00_SidebarContent_Login1 
+{
+	width: 200px !important;
+}
+
+table #ctl00_SidebarContent_Login1 input
+{
+	width: 150px !important;
+}
+
+#announcements
+{
+	width: 80%;
+	overflow: hidden;
+}
+
+.newsticker 
+{
+	list-style-image: none;
+	list-style-type: none;
+	border: 1px dashed #fff;
+	padding: 3px;
+	margin: 0;
+	text-align: left;
+}
+
+.errorPopup 
+{
+	position: absolute;
+	top: 200px;
+	left: 25%;
+	width: 50%;
+	background: white;
+	border: outset medium navy;
+}
+
+.errorPopup .closer 
+{
+	position: absolute;
+	right:0;
+	top:0;
+	color: White;
+	text-decoration: none;
+	font-size: 16pt;
+	
+}
+
+.errorPopup h2 
+{
+	background: navy;
+	color: White;
+}
+
+.errorPopup ul
+{
+	list-style-type: none;
+	list-style-image: none;
+}

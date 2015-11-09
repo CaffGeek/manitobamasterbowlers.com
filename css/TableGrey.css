@@ -1,0 +1,52 @@
+﻿.TableGrey
+{
+	width: 100%;
+	background: white;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.TableGrey td,
+.TableGrey th
+{
+	border: solid 1px white;
+}
+
+.TableGrey > thead 
+{
+	background: white;
+}
+
+.TableGrey > thead > tr > th
+{
+	color: White;
+	background-color: #a9a9a9;
+	text-align: center;
+}
+
+.TableGrey > thead > tr > td
+{
+	background-color: #c0c0c0;
+	text-align: center;
+}
+
+.TableGrey > tbody > tr > td
+{
+	background-color: #faebd7;
+}
+
+.TableGrey > tbody > tr.alt > td
+{
+	background-color: #fff5ee;
+}
+
+.TableGrey > tbody > tr.modified > td
+{
+	background-color: #D6F8FA !important;
+}
+
+.TableGrey > tfoot > tr
+{
+	color: White;
+	background-color: #a9a9a9;
+}

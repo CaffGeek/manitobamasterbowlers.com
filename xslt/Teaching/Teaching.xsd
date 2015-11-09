@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="nonNegativeWholeDecimal">
+		<xs:restriction base="xs:decimal">
+			<xs:pattern value="[0-9]*(\.[0]*)?"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name='requiredString'>
+		<xs:restriction base='xs:string'>
+			<xs:minLength value='1'/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+  <xs:simpleType name="Score">
+    <xs:restriction base="nonNegativeWholeDecimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="450"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Game">
+    <xs:simpleContent>
+      <xs:extension base="nonNegativeWholeDecimal" >
+        <xs:attribute name="number" type="Score" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+	<xs:element name="TeachingResult">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bowler" type="requiredString" />
+				<xs:element name="Average" type="nonNegativeWholeDecimal" />
+        <xs:element name="Game" type="Game" minOccurs="0" maxOccurs="8" />
+        <xs:element name="NewBowler" type="xs:boolean" />
+			</xs:sequence>
+      <xs:attribute name="status" type="xs:string" use="required" />
+      <xs:attribute name="fileName" type="requiredString" use="required" />
+      <xs:attribute name="tournamentId" type="nonNegativeWholeDecimal" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

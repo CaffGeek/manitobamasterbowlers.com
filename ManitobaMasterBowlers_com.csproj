@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AC37491-9F69-4C79-A64A-C1CD509895C1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManitobaMasterBowlers_com</RootNamespace>
+    <AssemblyName>ManitobaMasterBowlers_com</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.11119.18892, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin_announcements.aspx.cs">
+      <DependentUpon>admin_announcements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_announcements.aspx.designer.cs">
+      <DependentUpon>admin_announcements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board.aspx.cs">
+      <DependentUpon>board.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board.aspx.designer.cs">
+      <DependentUpon>board.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.Tournament.cs" />
+    <Compile Include="Upload.Senior.cs" />
+    <Compile Include="Masters.asmx.cs">
+      <DependentUpon>Masters.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="links.aspx.cs">
+      <DependentUpon>links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="links.aspx.designer.cs">
+      <DependentUpon>links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence.Internal.cs" />
+    <Compile Include="SiteMap.aspx.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMap.aspx.designer.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tournament.aspx.cs">
+      <DependentUpon>tournament.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tournament.aspx.designer.cs">
+      <DependentUpon>tournament.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.abstract.cs" />
+    <Compile Include="Upload.Teaching.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="youth.aspx.cs">
+      <DependentUpon>youth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="youth.aspx.designer.cs">
+      <DependentUpon>youth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_template.aspx.cs">
+      <DependentUpon>_template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_template.aspx.designer.cs">
+      <DependentUpon>_template.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin_announcements.aspx" />
+    <Content Include="App_Data\oldMasters.mdb">
+    </Content>
+    <Content Include="board.aspx" />
+    <Content Include="css\FixedHeaders.css" />
+    <Content Include="css\print.css" />
+    <Content Include="css\TableGrey.css" />
+    <Content Include="grey_cup_08.aspx" />
+    <Content Include="js\admin_announcements.js" />
+    <Content Include="js\ajaxslt-0.8.1\dom.js" />
+    <Content Include="js\ajaxslt-0.8.1\dom_unittest.html" />
+    <Content Include="js\ajaxslt-0.8.1\dom_unittest.js" />
+    <Content Include="js\ajaxslt-0.8.1\simplelog.js" />
+    <Content Include="js\ajaxslt-0.8.1\test\xpath.html" />
+    <Content Include="js\ajaxslt-0.8.1\test\xpath_script.js" />
+    <Content Include="js\ajaxslt-0.8.1\test\xslt.html" />
+    <Content Include="js\ajaxslt-0.8.1\test\xslt_script.js" />
+    <Content Include="js\ajaxslt-0.8.1\unittestsuite.html" />
+    <Content Include="js\ajaxslt-0.8.1\util.js" />
+    <Content Include="js\ajaxslt-0.8.1\xmltoken.js" />
+    <Content Include="js\ajaxslt-0.8.1\xmltoken_unittest.html" />
+    <Content Include="js\ajaxslt-0.8.1\xmltoken_unittest.js" />
+    <Content Include="js\ajaxslt-0.8.1\xpath.js" />
+    <Content Include="js\ajaxslt-0.8.1\xpathdebug.js" />
+    <Content Include="js\ajaxslt-0.8.1\xpath_unittest.html" />
+    <Content Include="js\ajaxslt-0.8.1\xpath_unittest.js" />
+    <Content Include="js\ajaxslt-0.8.1\xslt.js" />
+    <Content Include="js\ajaxslt-0.8.1\xslt_unittest.html" />
+    <Content Include="js\ajaxslt-0.8.1\xslt_unittest.js" />
+    <Content Include="js\announcements.js" />
+    <Content Include="js\datepicker.js" />
+    <Content Include="js\edit.js" />
+    <Content Include="js\jquery.jeditable-1.6.0.mini.js" />
+    <Content Include="js\jquery-1.2.6.min.js" />
+    <Content Include="js\jquery.newsticker.js" />
+    <Content Include="js\jquery.StyledButton\images\action_print.gif" />
+    <Content Include="js\jquery.StyledButton\images\apply.png" />
+    <Content Include="js\jquery.StyledButton\images\button_blue_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_blue_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_blue_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_blue_04.png" />
+    <Content Include="js\jquery.StyledButton\images\button_blue_05.png" />
+    <Content Include="js\jquery.StyledButton\images\button_blue_06.png" />
+    <Content Include="js\jquery.StyledButton\images\button_green_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_green_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_green_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_green_04.png" />
+    <Content Include="js\jquery.StyledButton\images\button_green_05.png" />
+    <Content Include="js\jquery.StyledButton\images\button_green_06.png" />
+    <Content Include="js\jquery.StyledButton\images\button_orange_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_orange_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_orange_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_orange_04.png" />
+    <Content Include="js\jquery.StyledButton\images\button_orange_05.png" />
+    <Content Include="js\jquery.StyledButton\images\button_orange_06.png" />
+    <Content Include="js\jquery.StyledButton\images\button_pink_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_pink_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_pink_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_pink_04.png" />
+    <Content Include="js\jquery.StyledButton\images\button_pink_05.png" />
+    <Content Include="js\jquery.StyledButton\images\button_pink_06.png" />
+    <Content Include="js\jquery.StyledButton\images\button_purple_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_purple_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_purple_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_purple_04.png" />
+    <Content Include="js\jquery.StyledButton\images\button_purple_05.png" />
+    <Content Include="js\jquery.StyledButton\images\button_purple_06.png" />
+    <Content Include="js\jquery.StyledButton\images\button_red_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_red_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_red_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_red_04.png" />
+    <Content Include="js\jquery.StyledButton\images\button_red_05.png" />
+    <Content Include="js\jquery.StyledButton\images\button_red_06.png" />
+    <Content Include="js\jquery.StyledButton\images\button_white_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_white_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_white_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_yellow_01.png" />
+    <Content Include="js\jquery.StyledButton\images\button_yellow_02.png" />
+    <Content Include="js\jquery.StyledButton\images\button_yellow_03.png" />
+    <Content Include="js\jquery.StyledButton\images\button_yellow_04.png" />
+    <Content Include="js\jquery.StyledButton\images\button_yellow_05.png" />
+    <Content Include="js\jquery.StyledButton\images\button_yellow_06.png" />
+    <Content Include="js\jquery.StyledButton\images\cancel.png" />
+    <Content Include="js\jquery.StyledButton\images\close_icon_small.png" />
+    <Content Include="js\jquery.StyledButton\images\disk.png" />
+    <Content Include="js\jquery.StyledButton\images\edit_icon_small.png" />
+    <Content Include="js\jquery.StyledButton\images\find.png" />
+    <Content Include="js\jquery.StyledButton\images\flag_blue.gif" />
+    <Content Include="js\jquery.StyledButton\images\flag_green.gif" />
+    <Content Include="js\jquery.StyledButton\images\flag_orange.gif" />
+    <Content Include="js\jquery.StyledButton\images\flag_red.gif" />
+    <Content Include="js\jquery.StyledButton\images\flag_white.gif" />
+    <Content Include="js\jquery.StyledButton\images\icon_download.gif" />
+    <Content Include="js\jquery.StyledButton\images\next.png" />
+    <Content Include="js\jquery.StyledButton\images\page.gif" />
+    <Content Include="js\jquery.StyledButton\images\PageIcon.png" />
+    <Content Include="js\jquery.StyledButton\images\PageQuestion.png" />
+    <Content Include="js\jquery.StyledButton\images\page_alert.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_attachment.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_bookmark.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_boy.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_code.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_colors.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_component.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_cross.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_delete.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_deny.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_down.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_dynamic.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_edit.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_extension.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_favourites.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_find.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_flash.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_girl.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_html.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_java.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_key.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_left.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_link.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_lock.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_new.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_next.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_package.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_php.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_prev.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_refresh.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_right.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_script.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_security.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_settings.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_sound.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_tag_blue.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_tag_red.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_text.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_text_delete.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_tick.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_tree.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_up.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_url.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_user.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_user_dark.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_user_light.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_video.gif" />
+    <Content Include="js\jquery.StyledButton\images\page_wizard.gif" />
+    <Content Include="js\jquery.StyledButton\images\redo.png" />
+    <Content Include="js\jquery.StyledButton\images\revertosaved.png" />
+    <Content Include="js\jquery.StyledButton\images\smartclipboard-logo.png" />
+    <Content Include="js\jquery.StyledButton\jquery-ui.nygard.styledbutton.css" />
+    <Content Include="js\jquery.StyledButton\jquery-ui.nygard.styledbutton.js" />
+    <Content Include="js\jquery.StyledButton\StyledButtonTest.htm" />
+    <Content Include="js\jquery.ui\AUTHORS.txt" />
+    <Content Include="js\jquery.ui\example.html" />
+    <Content Include="js\jquery.ui\GPL-LICENSE.txt" />
+    <Content Include="js\jquery.ui\i18n\jquery.ui.i18n.all.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-ar.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-bg.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-ca.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-cs.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-da.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-de.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-el.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-eo.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-es.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-fa.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-fi.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-fr.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-he.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-hr.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-hu.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-hy.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-id.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-is.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-it.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-ja.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-ko.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-lt.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-lv.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-ms.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-nl.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-no.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-pl.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-pt-BR.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-ro.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-ru.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-sk.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-sl.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-sq.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-sv.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-th.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-tr.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-uk.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-zh-CN.js" />
+    <Content Include="js\jquery.ui\i18n\ui.datepicker-zh-TW.js" />
+    <Content Include="js\jquery.ui\jquery-1.3.1.js" />
+    <Content Include="js\jquery.ui\jquery-ui-personalized-1.6rc6.js" />
+    <Content Include="js\jquery.ui\jquery-ui-personalized-1.6rc6.min.js" />
+    <Content Include="js\jquery.ui\MIT-LICENSE.txt" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="js\jquery.ui\theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\jquery.ui\theme\ui.accordion.css" />
+    <Content Include="js\jquery.ui\theme\ui.all.css" />
+    <Content Include="js\jquery.ui\theme\ui.base.css" />
+    <Content Include="js\jquery.ui\theme\ui.core.css" />
+    <Content Include="js\jquery.ui\theme\ui.datepicker.css" />
+    <Content Include="js\jquery.ui\theme\ui.dialog.css" />
+    <Content Include="js\jquery.ui\theme\ui.progressbar.css" />
+    <Content Include="js\jquery.ui\theme\ui.resizable.css" />
+    <Content Include="js\jquery.ui\theme\ui.slider.css" />
+    <Content Include="js\jquery.ui\theme\ui.tabs.css" />
+    <Content Include="js\jquery.ui\theme\ui.theme.css" />
+    <Content Include="js\jquery.ui\version.txt" />
+    <Content Include="js\jquery.xslt.js" />
+    <Content Include="js\selectNodes.js" />
+    <Content Include="js\sitemap.js" />
+    <Content Include="js\tiny_mce\examples\css\content.css" />
+    <Content Include="js\tiny_mce\examples\css\word.css" />
+    <Content Include="js\tiny_mce\examples\full.html" />
+    <Content Include="js\tiny_mce\examples\index.html" />
+    <Content Include="js\tiny_mce\examples\lists\image_list.js" />
+    <Content Include="js\tiny_mce\examples\lists\link_list.js" />
+    <Content Include="js\tiny_mce\examples\lists\media_list.js" />
+    <Content Include="js\tiny_mce\examples\lists\template_list.js" />
+    <Content Include="js\tiny_mce\examples\media\logo.jpg" />
+    <Content Include="js\tiny_mce\examples\media\logo_over.jpg" />
+    <Content Include="js\tiny_mce\examples\media\sample.avi" />
+    <Content Include="js\tiny_mce\examples\media\sample.mov" />
+    <Content Include="js\tiny_mce\examples\media\sample.swf" />
+    <Content Include="js\tiny_mce\examples\menu.html" />
+    <Content Include="js\tiny_mce\examples\simple.html" />
+    <Content Include="js\tiny_mce\examples\skins.html" />
+    <Content Include="js\tiny_mce\examples\templates\layout1.htm" />
+    <Content Include="js\tiny_mce\examples\templates\snippet1.htm" />
+    <Content Include="js\tiny_mce\examples\word.html" />
+    <Content Include="js\tiny_mce\langs\en.js" />
+    <Content Include="js\tiny_mce\license.txt" />
+    <Content Include="js\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="js\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="js\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="js\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="js\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="js\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="js\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="js\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="js\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\compat2x\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\compat2x\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="js\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="js\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="js\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="js\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="js\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="js\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="js\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="js\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="js\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="js\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="js\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="js\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\media\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="js\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\media\img\flash.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\flv_player.swf" />
+    <Content Include="js\tiny_mce\plugins\media\img\quicktime.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\realmedia.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\shockwave.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\trans.gif" />
+    <Content Include="js\tiny_mce\plugins\media\img\windowsmedia.gif" />
+    <Content Include="js\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="js\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="js\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\media\media.htm" />
+    <Content Include="js\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\img\pagebreak.gif" />
+    <Content Include="js\tiny_mce\plugins\pagebreak\img\trans.gif" />
+    <Content Include="js\tiny_mce\plugins\paste\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\paste\css\blank.css" />
+    <Content Include="js\tiny_mce\plugins\paste\css\pasteword.css" />
+    <Content Include="js\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="js\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="js\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="js\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="js\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\preview\example.html" />
+    <Content Include="js\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="js\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="js\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\safari\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\safari\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\safari\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="js\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="js\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="js\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\style\props.htm" />
+    <Content Include="js\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="js\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="js\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="js\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="js\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="js\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="js\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="js\tiny_mce\plugins\table\row.htm" />
+    <Content Include="js\tiny_mce\plugins\table\table.htm" />
+    <Content Include="js\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="js\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="js\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="js\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\plugins\template\template.htm" />
+    <Content Include="js\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="js\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="js\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="js\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="js\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="js\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="js\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="js\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="js\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="js\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="js\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="js\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="js\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="js\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="js\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="js\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="js\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="js\tiny_mce\tiny_mce.js" />
+    <Content Include="js\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="js\tiny_mce\tiny_mce_src.js" />
+    <Content Include="js\tiny_mce\utils\editable_selects.js" />
+    <Content Include="js\tiny_mce\utils\form_utils.js" />
+    <Content Include="js\tiny_mce\utils\mctabs.js" />
+    <Content Include="js\tiny_mce\utils\validate.js" />
+    <Content Include="Masters.asmx" />
+    <Content Include="links.aspx" />
+    <Content Include="mbj_individual.aspx" />
+    <Content Include="registration.aspx" />
+    <Content Include="regs.aspx" />
+    <Content Include="regs_mbj.aspx" />
+    <Content Include="regs_senior.aspx" />
+    <Content Include="regs_teaching.aspx" />
+    <Content Include="regs_tournament.aspx" />
+    <Content Include="SiteMap.aspx" />
+    <Content Include="tournament.aspx" />
+    <Content Include="css\default.css" />
+    <Content Include="images\announce.gif" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\board.gif" />
+    <Content Include="images\board_header.gif" />
+    <Content Include="images\board_over.gif" />
+    <Content Include="images\bowling_04.gif" />
+    <Content Include="images\content.gif" />
+    <Content Include="images\footer.jpg" />
+    <Content Include="images\guest.gif" />
+    <Content Include="images\guest_book.gif" />
+    <Content Include="images\guest_over.gif" />
+    <Content Include="images\header.gif" />
+    <Content Include="images\home.gif" />
+    <Content Include="images\home_over.gif" />
+    <Content Include="images\left_main.gif" />
+    <Content Include="images\links.gif" />
+    <Content Include="images\links_header.gif" />
+    <Content Include="images\links_over.gif" />
+    <Content Include="images\master_youth_header.gif" />
+    <Content Include="images\regs.gif" />
+    <Content Include="images\regs_header.gif" />
+    <Content Include="images\regs_over.gif" />
+    <Content Include="images\schedule.gif" />
+    <Content Include="images\schedule_header.gif" />
+    <Content Include="images\schedule_over.gif" />
+    <Content Include="images\senior.gif" />
+    <Content Include="images\senior_header.gif" />
+    <Content Include="images\senior_over.gif" />
+    <Content Include="images\side_bottom.gif" />
+    <Content Include="images\side_repeat.gif" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\teaching.gif" />
+    <Content Include="images\teaching_header.gif" />
+    <Content Include="images\teaching_over.gif" />
+    <Content Include="images\tournament.gif" />
+    <Content Include="images\tournament_header.gif" />
+    <Content Include="images\tournament_over.gif" />
+    <Content Include="images\youth.gif" />
+    <Content Include="images\youth_over.gif" />
+    <Content Include="Site1.Master" />
+    <Content Include="schedule.aspx" />
+    <Content Include="xslt\Announcements_Ticker.xslt" />
+    <Content Include="xslt\Announcements_Edit.xslt" />
+    <Content Include="xslt\Senior\Senior.xslt" />
+    <Content Include="xslt\Senior\SeniorResults.xslt" />
+    <Content Include="xslt\Tournament\Tournament.xslt" />
+    <Content Include="xslt\Tournament\TournamentResults.xslt" />
+    <Content Include="xslt\Teaching\Teaching.xslt" />
+    <Content Include="xslt\Teaching\TeachingResults.xslt" />
+    <Content Include="xslt\UploadErrors.xslt" />
+    <Content Include="youth.aspx" />
+    <Content Include="_template.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="js\ajaxslt-0.8.1\AUTHORS" />
+    <None Include="js\ajaxslt-0.8.1\ChangeLog" />
+    <None Include="js\ajaxslt-0.8.1\COPYING" />
+    <None Include="js\ajaxslt-0.8.1\Makefile" />
+    <None Include="js\ajaxslt-0.8.1\README" />
+    <None Include="js\ajaxslt-0.8.1\TODO" />
+    <None Include="js\jquery.StyledButton\images\Thumbs.db" />
+    <None Include="js\tiny_mce\examples\media\sample.dcr" />
+    <None Include="js\tiny_mce\examples\media\sample.ram" />
+    <None Include="js\tiny_mce\examples\media\sample.rm" />
+    <None Include="docs\Membership Book Pages 2008-2009.doc" />
+    <None Include="uploads\tournamenttemplate.xls" />
+    <None Include="uploads\seniortemplate.xls" />
+    <None Include="uploads\teachingtemplate.xls" />
+    <None Include="xslt\Senior\Senior.xsd" />
+    <None Include="xslt\Tournament\Tournament.xsd" />
+    <None Include="xslt\Teaching\Teaching.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="uploads\results\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50441</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

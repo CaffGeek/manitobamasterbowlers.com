@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ManitobaMasterBowlers_com.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Bowlers' Association Of Manitoba</title>
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/FixedHeaders.css" rel="stylesheet" type="text/css" />
+    <link href="css/TableGrey.css" rel="stylesheet" type="text/css" />
+    <link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="js/jquery.ui/theme/ui.all.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="~/js/jquery.ui/jquery-1.3.1.js" />
+            <asp:ScriptReference Path="~/js/jquery.ui/jquery-ui-personalized-1.6rc6.js" />
+            <asp:ScriptReference Path="~/js/jquery.jeditable-1.6.0.mini.js" />
+            <asp:ScriptReference Path="~/js/tiny_mce/tiny_mce_src.js" />
+            <asp:ScriptReference Path="~/js/jquery.newsticker.js" />
+            <asp:ScriptReference Path="~/js/jquery.StyledButton/jquery-ui.nygard.styledbutton.js" />
+            <asp:ScriptReference Path="~js/ajaxslt-0.8.1/xslt.js" />
+            <asp:ScriptReference Path="~/js/jquery.xslt.js" />
+            <asp:ScriptReference Path="~/js/selectNodes.js" />
+            <asp:ScriptReference Path="~/js/edit.js" />
+            <asp:ScriptReference Path="~/js/datepicker.js" />
+            <asp:ScriptReference Path="~/js/announcements.js" />
+        </Scripts>
+        <Services>
+            <asp:ServiceReference Path="~/Masters.asmx" />
+        </Services>
+    </asp:ScriptManager>
+    <div id="main">
+        <div id="header">
+            <img src="images/header.gif" alt="Master Bowlers' Association of Manitoba" /></div>
+        <div id="nav">
+            <a href="/">
+                <img src="images/home.gif" alt="home" id="home" />
+            </a>
+            <a href="board.aspx">
+                <img src="images/board.gif" alt="board" id="board" />
+            </a>
+            <a href="regs.aspx">
+                <img src="images/regs.gif" alt="regs" id="regs" />
+            </a>
+            <a href="schedule.aspx">
+                <img src="images/schedule.gif" alt="schedule" id="schedule" />
+            </a>
+            <a href="tournament.aspx?Division=Tournament">
+                <img src="images/tournament.gif" alt="tournament" id="tournament" />
+            </a>
+            <a href="tournament.aspx?Division=Teaching">
+                <img src="images/teaching.gif" alt="teaching" id="teaching" />
+            </a>
+            <a href="tournament.aspx?Division=Senior">
+                <img src="images/senior.gif" alt="senior" id="senior" />
+            </a>
+            <a href="youth.aspx">
+                <img src="images/youth.gif" alt="youth" id="youth" />
+            </a>
+            <a href="links.aspx">
+                <img src="images/links.gif" alt="links" id="links" />
+            </a>
+            <a href="registration.aspx">
+                <img src="images/guest.gif" alt="registration" id="registration" />
+            </a>
+        </div>
+        <div id="content_area" style="clear:both;">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="9px" id="left_main">
+                        <img src="images/left_main.gif" width="9" height="501" />
+                    </td>
+                    <td id="content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <br />
+                    </td>
+                    <td width="248px" align="center" id="sidebar">
+                        <asp:ContentPlaceHolder ID="SidebarContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="footer">
+            <img src="images/footer.jpg" /></div>
+    </div>
+    </form>
+</body>
+</html>

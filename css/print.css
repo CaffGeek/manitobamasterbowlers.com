@@ -1,0 +1,6 @@
+﻿#nav, 
+#sidebar *,
+#footer
+{
+	display: none;
+}

@@ -1,0 +1,282 @@
+﻿.StyledButton {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-family: Trebuchet MS;
+	text-decoration: none;
+	text-align:center;
+	margin:  2px 0px 4px 4px; /*Balances spacing around button*/
+}
+
+.StyledButton:link {
+	color: #666666;
+}
+.StyledButton:visited {
+	color: #666666;
+}
+.StyledButton:hover {
+	color: #666666;
+}
+.StyledButton:active {
+	color: #666666;
+}
+
+.StyledButton .L {
+	height: 24px;
+	background-position: left top;
+	background-repeat: repeat-y;
+}
+
+.StyledButton .C {
+	margin: 0 10px 0 6px;
+	overflow: hidden;
+	background-repeat: repeat;
+	height: 24px;
+}
+
+.StyledButton .R {
+	height: 24px;
+	background-position: right top;
+	background-repeat: repeat-y;
+}
+
+.StyledButton .BL 
+{
+	position: absolute;
+	height: 7px;
+	background: url(./images/button_blue_04.png) no-repeat left top;
+	width:100%;
+}
+
+.StyledButton .BC 
+{
+	position:absolute;
+	left:6px;
+	right:10px;
+	bottom: 0px;
+	height: 7px;
+	background: url(./images/button_blue_05.png) repeat-x center bottom;
+}
+
+.StyledButton .BR {
+	height: 7px;
+	background: url(./images/button_blue_06.png) no-repeat right top;
+}
+
+.StyledButton .ButtonText {
+	width:100%;
+	line-height: 24px;
+	background-position: left center;
+	background-repeat:no-repeat;
+	font-weight: bold;
+	display:inline-block;
+	text-align: left;
+}
+
+/* BLUE BUTTON SPECIFIC RULES */
+.StyledButton.Blue:link {
+	color:#FFFFFF;
+}
+.StyledButton.Blue:visited {
+	color:#FFFFFF;
+}
+.StyledButton.Blue:hover {
+	color:#FFFFFF;
+}
+.StyledButton.Blue:active {
+	color:#FFFFFF;
+}
+.StyledButton.Blue .L {
+	background-image: url(./images/button_blue_01.png);
+}
+.StyledButton.Blue .C {
+	background-image: url(./images/button_blue_02.png);
+}
+.StyledButton.Blue .R {
+	background-image: url(./images/button_blue_03.png);
+}
+
+/* GREEN BUTTON SPECIFIC RULES */
+.StyledButton.Green .L 
+{
+	background-image: url(./images/button_green_01.png);
+}
+.StyledButton.Green .C {
+	background-image: url(./images/button_green_02.png);
+}
+.StyledButton.Green .R {
+	background-image: url(./images/button_green_03.png);
+}
+
+/* ORANGE BUTTON SPECIFIC RULES */
+.StyledButton.Orange .L {
+	background-image: url(./images/button_orange_01.png);
+}
+.StyledButton.Orange .C {
+	background-image: url(./images/button_orange_02.png);
+}
+.StyledButton.Orange .R {
+	background-image: url(./images/button_orange_03.png);
+}
+
+/* PINK BUTTON SPECIFIC RULES */
+.StyledButton.Pink .L {
+	background-image: url(./images/button_pink_01.png);
+}
+.StyledButton.Pink .C {
+	background-image: url(./images/button_pink_02.png);
+}
+.StyledButton.Pink .R {
+	background-image: url(./images/button_pink_03.png);
+}
+
+/* PURPLE BUTTON SPECIFIC RULES */
+.StyledButton.Purple:link {
+	color:#FFFFFF;
+}
+.StyledButton.Purple:visited {
+	color:#FFFFFF;
+}
+.StyledButton.Purple:hover {
+	color:#FFFFFF;
+}
+.StyledButton.Purple:active {
+	color:#FFFFFF;
+}
+.StyledButton.Purple .L {
+	background-image: url(./images/button_purple_01.png);
+}
+.StyledButton.Purple .C {
+	background-image: url(./images/button_purple_02.png);
+}
+.StyledButton.Purple .R {
+	background-image: url(./images/button_purple_03.png);
+}
+
+/* RED BUTTON SPECIFIC RULES */
+.StyledButton.Red:link {
+	color:#FFFFFF;
+}
+.StyledButton.Red:visited {
+	color:#FFFFFF;
+}
+.StyledButton.Red:hover {
+	color:#FFFFFF;
+}
+.StyledButton.Red:active {
+	color:#FFFFFF;
+}
+.StyledButton.Red .L {
+	background-image: url(./images/button_red_01.png);
+}
+.StyledButton.Red .C {
+	background-image: url(./images/button_red_02.png);
+}
+.StyledButton.Red .R {
+	background-image: url(./images/button_red_03.png);
+}
+
+/* YELLOW BUTTON SPECIFIC RULES */
+.StyledButton.Yellow .L {
+	background-image: url(./images/button_yellow_01.png);
+}
+.StyledButton.Yellow .C {
+	background-image: url(./images/button_yellow_02.png);
+}
+.StyledButton.Yellow .R {
+	background-image: url(./images/button_yellow_03.png);
+}
+
+/* White BUTTON SPECIFIC RULES */
+.StyledButton.White .L {
+	background-image: url(./images/button_white_01.png);
+}
+.StyledButton.White .C {
+	background-image: url(./images/button_white_02.png);
+}
+.StyledButton.White .R {
+	background-image: url(./images/button_white_03.png);
+}
+
+/* ICON SPECIFIC RULES */
+.StyledButton.Activate .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/apply.png);
+}
+.StyledButton.Approve .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/flag_green.gif);
+}
+.StyledButton.Cancel .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/page_deny.gif);
+}
+.StyledButton.Clear .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/page_refresh.gif);
+}
+.StyledButton.Close .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/close_icon_small.png);
+}
+.StyledButton.Deactivate .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/cancel.png);
+}
+.StyledButton.Edit .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/edit_icon_small.png);
+}
+.StyledButton.Export .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/page_up.gif);
+}
+.StyledButton.MoreInfo .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/page_text.gif);
+}
+.StyledButton.Reject .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/page_deny.gif);
+}
+.StyledButton.Revert .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/revertosaved.png);
+}
+.StyledButton.Print .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/action_print.gif);
+}
+.StyledButton.Save .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/disk.png);
+}
+.StyledButton.Send .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/icon_download.gif);
+}
+.StyledButton.Search .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/find.png);
+}
+.StyledButton.SmartClipboard .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/smartclipboard-logo.png);
+}
+.StyledButton.StartOver .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/redo.png);
+}
+.StyledButton.Submit .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/page_right.gif);
+}
+.StyledButton.Next .ButtonText {
+	padding-left: 25px;
+	background-image: url(./images/next.png);
+} 
+.StyledButton.NewPage .ButtonText 
+{
+	padding-left: 25px;
+	background-image: url(./images/page_new.gif);
+}
