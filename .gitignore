@@ -229,5 +229,5 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
-web.config
+web.*.config
 =======
