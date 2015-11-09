@@ -230,4 +230,5 @@ _Pvt_Extensions
 .fake/
 
 web.*.config
+uploads/results/*
 =======
