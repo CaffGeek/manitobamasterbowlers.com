@@ -18,6 +18,11 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,6 +66,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Default.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -712,9 +718,16 @@
     <None Include="js\tiny_mce\examples\media\sample.ram" />
     <None Include="js\tiny_mce\examples\media\sample.rm" />
     <None Include="docs\Membership Book Pages 2008-2009.doc" />
+    <None Include="Properties\PublishProfiles\WebHost4Life.pubxml" />
     <None Include="uploads\tournamenttemplate.xls" />
     <None Include="uploads\seniortemplate.xls" />
     <None Include="uploads\teachingtemplate.xls" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
     <None Include="xslt\Senior\Senior.xsd" />
     <None Include="xslt\Tournament\Tournament.xsd" />
     <None Include="xslt\Teaching\Teaching.xsd" />
@@ -747,6 +760,9 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
