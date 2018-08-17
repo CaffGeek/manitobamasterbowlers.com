@@ -24,7 +24,7 @@
             </p>
         </ItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="AccessDataSource1" runat="server" ConnectionString="Data Source=sql348.mysite4now.com;Initial Catalog=Masters_85900;Persist Security Info=True;User ID=gszpak_85900;Password=prince"
+    <asp:SqlDataSource ID="AccessDataSource1" runat="server" ConnectionString="Data Source=VCNSQL81.webhost4life.com;Initial Catalog=Masters_85900;Persist Security Info=True;User ID=gszpak_85900;Password=prince"
         SelectCommand="SELECT [Name], [Position], [Phone], [Email] FROM [BoardMembers] ORDER BY [Order]">
     </asp:SqlDataSource>
 </asp:Content>

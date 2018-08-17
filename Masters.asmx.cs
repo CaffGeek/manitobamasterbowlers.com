@@ -12,6 +12,7 @@ using System.Web;
 using System.Text.RegularExpressions;
 using System.IO;
 using ManitobaMasterBowlers_com;
+using System.Configuration;
 
 [WebService(Namespace = "http://tempuri.org/")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -19,7 +20,20 @@ using ManitobaMasterBowlers_com;
 [System.Web.Script.Services.ScriptService]
 public class Masters : System.Web.Services.WebService
 {
-    SqlConnection Connection = new SqlConnection("Data Source=sql348.mysite4now.com;Initial Catalog=Masters_85900;Persist Security Info=True;User ID=gszpak_85900;Password=prince");
+
+    SqlConnection _connection;
+    SqlConnection Connection
+    {
+        get
+        {
+            if (_connection == null)
+            {
+                ConnectionStringSettings connection = ConfigurationManager.ConnectionStrings["Masters_ConnectionString"];
+                _connection = new SqlConnection(connection.ConnectionString);
+            }
+            return _connection;
+        }
+    }
 
     #region ContentBlocks
     [WebMethod]
