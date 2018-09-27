@@ -5,6 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="contentBlock edit_mce" id="board"></div>
+    <asp:PlaceHolder runat="server" ID="editControls" Visible="false">
+        <a id="homepage_edit" onclick="javascript: EditContentBlock($('div#homepage'));" href="#">Edit</a>
+    </asp:PlaceHolder>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="SidebarContent" runat="server">
     <img src="images/board_header.gif" alt="board" />
