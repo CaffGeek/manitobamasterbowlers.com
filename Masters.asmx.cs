@@ -49,7 +49,7 @@ public class Masters : System.Web.Services.WebService
         }
         catch (Exception x)
         {
-            return x.Message;
+            return "FAIL: " + x.Message;
         }
         finally
         {
