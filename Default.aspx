@@ -2,6 +2,7 @@
     MasterPageFile="~/Site1.Master" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="MainContent">
+    <%=System.Configuration.ConfigurationManager.ConnectionStrings["Masters_ConnectionString"].ConnectionString%>
     <div class="contentBlock edit_mce" id="homepage"></div>
     <asp:PlaceHolder runat="server" ID="editControls" Visible="false">
         <a id="homepage_edit" onclick="javascript: EditContentBlock($('div#homepage'));" href="#">Edit</a>
