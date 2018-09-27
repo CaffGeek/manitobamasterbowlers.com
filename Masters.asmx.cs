@@ -29,6 +29,8 @@ public class Masters : System.Web.Services.WebService
             if (_connection == null)
             {
                 ConnectionStringSettings connection = ConfigurationManager.ConnectionStrings["Masters_ConnectionString"];
+                var x = connection.ConnectionString;
+                throw new Exception(x ?? "missing");
                 _connection = new SqlConnection(connection.ConnectionString);
             }
             return _connection;
@@ -49,7 +51,7 @@ public class Masters : System.Web.Services.WebService
         }
         catch (Exception x)
         {
-            return "FAIL: " + x.Message;
+            return x.Message;
         }
         finally
         {
