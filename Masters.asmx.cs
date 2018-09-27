@@ -30,7 +30,7 @@ public class Masters : System.Web.Services.WebService
             {
                 ConnectionStringSettings connection = ConfigurationManager.ConnectionStrings["Masters_ConnectionString"];
                 var x = connection.ConnectionString;
-                throw new Exception(x ?? "missing");
+                throw new Exception("Connection: " + (x ?? "missing"));
                 _connection = new SqlConnection(connection.ConnectionString);
             }
             return _connection;
