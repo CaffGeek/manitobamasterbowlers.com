@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
-using System.Xml.Linq;
 
 namespace ManitobaMasterBowlers_com
 {
@@ -17,7 +7,8 @@ namespace ManitobaMasterBowlers_com
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var connectionString = ConfigurationManager.ConnectionStrings["Masters_ConnectionString"].ConnectionString;
+            AccessDataSource1.ConnectionString = connectionString;
         }
     }
 }

@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Configuration;
-using System.Data;
-using System.Linq;
 using System.Web;
-using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
-using System.Data.OleDb;
-using System.Xml;
-using System.IO;
 
 namespace ManitobaMasterBowlers_com
 {
@@ -53,6 +44,13 @@ namespace ManitobaMasterBowlers_com
         #region Page_Load
         protected void Page_Load(object sender, EventArgs e)
         {
+            var connectionString = ConfigurationManager.ConnectionStrings["Masters_ConnectionString"].ConnectionString;
+            dsTournamentResults.ConnectionString = connectionString;
+            dsTournament.ConnectionString = connectionString;
+            dsSeason.ConnectionString = connectionString;
+            dsTournamentSummary.ConnectionString = connectionString;
+
+
             SidebarHeader.ImageUrl = "images/" + Division + "_header.gif";
             SidebarHeader.ToolTip = Division;
 

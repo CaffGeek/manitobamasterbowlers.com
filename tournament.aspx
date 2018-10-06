@@ -8,7 +8,6 @@
             DataSourceID="dsSeason" DataTextField="SeasonDesc" 
             DataValueField="SeasonCode"></asp:DropDownList>
         <asp:SqlDataSource ID="dsSeason" runat="server" 
-            ConnectionString="Data Source=VCNSQL81.webhost4life.com;Initial Catalog=Masters_85900;Persist Security Info=True;User ID=gszpak_85900;Password=prince"
             SelectCommand="SELECT [SeasonCode], [SeasonDesc], [Id] FROM [SeasonTable] ORDER BY [SeasonDesc] DESC">
         </asp:SqlDataSource>
         Tournament  
@@ -16,7 +15,6 @@
             DataSourceID="dsTournament" DataTextField="TournamentLocation" 
             DataValueField="Id" OnDataBound="Tournament_DataBound"></asp:DropDownList>
         <asp:SqlDataSource ID="dsTournament" runat="server" 
-                ConnectionString="Data Source=VCNSQL81.webhost4life.com;Initial Catalog=Masters_85900;Persist Security Info=True;User ID=gszpak_85900;Password=prince"
                 SelectCommand="SELECT [Id], [TournamentNumber], [TournamentLocation] FROM [TournamentTable] WHERE (([SeasonCode] = @SeasonCode) AND ([Division] = @Division)) ORDER BY TournamentNumber">
             <SelectParameters>
                 <asp:ControlParameter ControlID="Year" Name="SeasonCode" PropertyName="SelectedValue" Type="String" DefaultValue="2008" />
@@ -118,7 +116,6 @@
             </EmptyDataTemplate>
         </asp:ListView>
         <asp:SqlDataSource ID="dsTournamentResults" runat="server" 
-            ConnectionString="Data Source=VCNSQL81.webhost4life.com;Initial Catalog=Masters_85900;Persist Security Info=True;User ID=gszpak_85900;Password=prince"
             SelectCommandType="StoredProcedure"
             SelectCommand="TournamentAllResults">
             <SelectParameters>
@@ -204,7 +201,6 @@
             </EmptyDataTemplate>
         </asp:ListView>
         <asp:SqlDataSource ID="dsTournamentSummary" runat="server" 
-            ConnectionString="Data Source=VCNSQL81.webhost4life.com;Initial Catalog=Masters_85900;Persist Security Info=True;User ID=gszpak_85900;Password=prince"
             SelectCommandType="StoredProcedure"
             SelectCommand="Top4TotalResults">
             <SelectParameters>
