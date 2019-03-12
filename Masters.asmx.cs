@@ -104,9 +104,10 @@ public class Masters : System.Web.Services.WebService
             }
             reader.Close();
 
+            result = result.Replace("&amp;nbsp;", " ");
             output = XElement.Parse(HttpUtility.HtmlDecode(result));
         }
-        catch
+        catch (Exception x)
         {
             throw;
         }

@@ -39,10 +39,10 @@
             <xsl:value-of select="F9"/>
           </Game>
           <NewBowler>
-            <xsl:if test="translate(substring(F11,1,1), $lowercase, $uppercase) = 'Y'">
+            <xsl:if test="translate(substring(F10,1,1), $lowercase, $uppercase) = 'Y'">
               <xsl:text>1</xsl:text>
             </xsl:if>
-            <xsl:if test="not(translate(substring(F11,1,1), $lowercase, $uppercase) = 'Y')">
+            <xsl:if test="not(translate(substring(F10,1,1), $lowercase, $uppercase) = 'Y')">
               <xsl:text>0</xsl:text>
             </xsl:if>
           </NewBowler>
