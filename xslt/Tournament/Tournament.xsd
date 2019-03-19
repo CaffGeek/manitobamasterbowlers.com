@@ -34,6 +34,8 @@
 				<xs:element name="Bowler" type="requiredString" />
         <xs:element name="Game" type="Game" minOccurs="0" maxOccurs="8" />
         <xs:element name="NewBowler" type="xs:boolean" />
+        <xs:element name="Gender" type="xs:string" />
+        <xs:element name="Guest" type="xs:boolean" />
 			</xs:sequence>
       <xs:attribute name="status" type="xs:string" use="required" />
       <xs:attribute name="fileName" type="requiredString" use="required" />

@@ -49,6 +49,17 @@
               <xsl:text>0</xsl:text>
             </xsl:if>
           </NewBowler>
+          <Gender>
+            <xsl:value-of select="F12"/>
+          </Gender>
+          <Guest>
+            <xsl:if test="translate(substring(F13,1,1), $lowercase, $uppercase) = 'Y'">
+              <xsl:text>1</xsl:text>
+            </xsl:if>
+            <xsl:if test="not(translate(substring(F13,1,1), $lowercase, $uppercase) = 'Y')">
+              <xsl:text>0</xsl:text>
+            </xsl:if>
+          </Guest>
 			</TeachingResult>
 			</xsl:for-each>
 		</TeachingResults>	
